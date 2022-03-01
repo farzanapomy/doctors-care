@@ -71,7 +71,7 @@ p{
     position: relative;
 }
 .second-section{
-    background-image: url("/lib/images/bg2.png");
+    background-image: url("/images/bg2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -181,7 +181,7 @@ p{
     }
 
     .third-section{
-        background-image: url("/lib/images/path.png");        
+        background-image: url("/images/path.png");        
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh;
