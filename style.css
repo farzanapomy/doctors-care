@@ -83,7 +83,7 @@ p{
 }
 .second-text{
     position: relative;
-    top: 140px;
+    top: 100px;
 }
 
 #spacial-img{
@@ -102,16 +102,14 @@ p{
     overflow: hidden;
 }
 .single-image img {
-    width: 90%;
     height: auto;
-    object-fit: cover;
-    object-position: center;
+    
 }
 
 
 .div-style{
-    width: 10px;
-    height: 10px;  
+    width: 15px;
+    height: 15px;  
     border-radius: 50%;
     background-color: #5e5fd6;
 
@@ -127,18 +125,128 @@ p{
 
 @media only screen and (max-width: 768px) {
    
+    .second-text h1{
+        font-size: 70px;
+    }    
+    .second-text h1,h4{
+        text-align: center;
+    }    
+
+    .second-section{
+        width: 110%;
+    }
+
     .single-image {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        width: 100%;
-        overflow: hidden;
     }
+
+    .single-text {
+        text-align: center;
+        position: relative;
+        bottom: 600px;
+        z-index: 2;
+    }
+
+    .single-text h1{
+        font-size: 50px;
+        text-align: center;
+        color: #5e5fd6;
+        font-weight: bold;
+    }
+
+    .feuille-section{
+      position: relative;
+      bottom: 550px;
+      box-shadow: .5px .5px 5px .5px #ccc;
+      height: 780px;
+      width: 100vw;
+      text-align: left;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 0px auto;
+      z-index: 2;            
+      
+    }
+    .feuille-first{
+        background-color: #a7722867;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: relative;
+        left: 70px;
+        bottom: 30px;
+        z-index: 1;
+       
+    }
+    .feuille-img1{
+        width: 300px;
+        position: relative;
+        left: -80px;
+        bottom:300px;
+        z-index: 2;
+   
+    }
+    .feuille-img2{
+        width: 150px;
+        position: relative;
+        right: 150px;
+        bottom: 120px;
+    }
+
+    .feuille-second{
+        position: relative;
+       bottom: 270px;
+       line-height: 1px;
+    }
+
+    .forth-part{
+        visibility: hidden;
+    }
+
+    .forth-part{
+        position: absolute;
+        top: -10000px;
+    }
+
+    .footer-div-text h2{
+        text-align: center;
+        font-size: 25px;
+    }
+    .footer-div-text h6{
+        text-align: center;
+    }
+    .footer-div-text{
+        text-align: left;
+        padding: 0px 10px;
+    }
+    .footer-part{
+        text-align: left;
+    }
+    .footer-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+    }
+
 
     .footer-img{
         visibility: hidden;
     }
     .footer{
         margin: 0px auto;
+        
+    }
+    .footer-text p{
+        background-color: #5e5fd6;  
+        color: #fff;
+        padding: 10px 30px;
+    }
+    .footer-text{
+        overflow: hidden;
+        /* /* height: 150px; */
+
     }
 }
 
@@ -160,9 +268,9 @@ p{
     }
 
     .footer-img{
-            max-height:450px;
-            overflow:hidden;
-            margin-left:-20px;;
+        max-height:450px;
+        overflow:hidden;
+        margin-left:-20px;;
     }
     
     .footer-text{
@@ -202,14 +310,11 @@ p{
 
 }
  
- .feuille-part{
-     /* background-color: white; */
- }
  
  .feuille-first{
      background-color: #a7722867;
      width: 350px;
-     height: 250px;
+     height: 350px;
      border-radius: 50%;
      position: relative;
      left: 130px;
@@ -239,7 +344,7 @@ p{
  }
  .single-text{
     position: relative;
-    bottom: 380px;
+    bottom: 350px;
     margin-bottom: 240px;
     margin-left: 700px;
     font-size: 35px;
@@ -308,10 +413,11 @@ p{
     z-index: 1;
 }
 
- .img-flip{
+.img-flip{
     position: relative;
+    -webkit-transform: scaleX(-1);
     bottom: 250px;
-    left: 80px;
+    right: 50px;
 
 }
 }
