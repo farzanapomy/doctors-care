@@ -241,12 +241,13 @@ p{
     .footer-text p{
         background-color: #5e5fd6;  
         color: #fff;
-        padding: 10px 30px;
+        padding: 10px 20px;
+        font-size: 15px;
+        /* white-space:pre; */
     }
+    /* make full width in footer */
     .footer-text{
-        overflow: hidden;
-        /* /* height: 150px; */
-
+        width: 100%;
     }
 }
 
