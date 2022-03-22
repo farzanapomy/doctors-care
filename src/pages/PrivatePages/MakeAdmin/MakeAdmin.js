@@ -6,7 +6,7 @@ const MakeAdmin = () => {
   const handleAdmin = (e) => {
     const emailObj = { email }
     e.preventDefault()
-    fetch('http://localhost:5000/users/admin', {
+    fetch('https://cryptic-eyrie-03713.herokuapp.com/users/admin', {
       method: "PUT",
       headers: {
         "content-type": "application/json"
@@ -22,7 +22,7 @@ const MakeAdmin = () => {
       })
   }
 
-  
+
   return (
     <div>
       <form onSubmit={handleAdmin}>

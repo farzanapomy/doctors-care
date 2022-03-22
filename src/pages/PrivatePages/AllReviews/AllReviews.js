@@ -25,7 +25,7 @@ const AllReviews = () => {
 
 
     const handleDelete = (id) => {
-        const makeSure = window.confirm('Are you sure to want to delete this blog?')
+        const makeSure = window.confirm('Are you sure to want to delete this Reviews?')
         if (makeSure) {
             fetch(`https://cryptic-eyrie-03713.herokuapp.com/reviews/${id}`, {
                 method: "DELETE"
@@ -33,7 +33,7 @@ const AllReviews = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.acknowledged === true) {
-                        const rest = reviews.filter(blog => blog._id !== id)
+                        const rest = reviews.filter(rev => rev._id !== id)
                         reviews(rest)
                     }
                 })

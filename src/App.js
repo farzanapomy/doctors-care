@@ -41,7 +41,7 @@ function App() {
             <Route path="Services" element={<Services />} />
             <Route path="MakeAdmin" element={<MakeAdmin />} />
 
-            <Route path="/doctors/:ID" element={<PrivateRoute><Appointment /> </PrivateRoute>} />
+            <Route path="/Services/:ID" element={<PrivateRoute><Appointment /> </PrivateRoute>} />
 
 
 

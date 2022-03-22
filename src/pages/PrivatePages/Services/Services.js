@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Service from '../Service/Service';
 import './Services.css'
-import { Grid } from '@mui/material';
+import { Container } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+
 
 const Services = () => {
     const [services, setServices] = useState([])
@@ -11,11 +15,22 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
 
-    
+    const handleSubmit = (data) => {
+        axios.post('https://cryptic-eyrie-03713.herokuapp.com/appointments', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('Your Orders successfully added');
+                }
+                console.log(res);
+            })
+
+        console.log('data');
+    }
+
 
 
     return (
-        <div className=' my-5 '>
+        <Container sx={{ my: 5 }}>
 
             <div className='service-title'>
                 <h2>
@@ -27,17 +42,46 @@ const Services = () => {
 
             </div>
 
-            <Grid xs={12} md={3} className="" >
+            <Grid className="" container spacing={1} >
 
                 {
-                    services.map(service => <Service
+                    services.map(service => <Grid xs={12} md={4}
                         key={service._id}
-                        service={service}
-                    ></Service>)
+                    >
+
+                        <Grid className='single-total '>
+
+                            <Card className='total-service' sx={{ marginLeft: '5px' }}>
+                                <Card className='single-service '>
+
+                                    <CardMedia
+                                        component="img"
+                                        height="194"
+                                        src={service.img}
+                                    />
+                                    <CardContent>
+                                        <Typography >{service.title}</Typography>
+                                        <Typography>
+                                            {service.description}
+                                        </Typography>
+                                        <Typography >
+                                            Charge :${service.cost}
+                                        </Typography >
+                                    </CardContent>
+
+                                    <Link to={`/Services/${service._id}`} className='service-btn'>
+                                        <button onSubmit={handleSubmit}>Get Appointment</button>
+                                    </Link>
+                                </Card>
+                            </Card >
+
+
+                        </Grid>
+                    </Grid>)
                 }
             </Grid>
 
-        </div >
+        </Container >
     );
 };
 

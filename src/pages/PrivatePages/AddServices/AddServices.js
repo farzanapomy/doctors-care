@@ -20,7 +20,7 @@ const AddServices = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://cryptic-eyrie-03713.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Service Added Successfully.')
@@ -39,7 +39,7 @@ const AddServices = () => {
 
     return (
         <div>
-            <Typography variant='h4' sx={{ mb: 5 }}>Add Doctors</Typography>
+            <Typography variant='h4' sx={{ mb: 5 }}>Add Services</Typography>
             <form onSubmit={handleSubmit}>
                 <TextField
                     required
@@ -57,14 +57,7 @@ const AddServices = () => {
                     onChange={getData}
                     sx={{ width: "100%", maxWidth: "500px", my: 1 }}
                 /><br />
-                <TextField
-                    required
-                    label="Location"
-                    variant="filled"
-                    name='location'
-                    onChange={getData}
-                    sx={{ width: "100%", maxWidth: "500px", my: 1 }}
-                /><br />
+
                 <TextField
                     required
                     label="Cost $"
@@ -74,25 +67,6 @@ const AddServices = () => {
                     onChange={getData}
                     sx={{ width: "100%", maxWidth: "500px", my: 1 }}
                 /><br />
-                <TextField
-                    required
-                    label=""
-                    variant="filled"
-                    type='date'
-                    name='date'
-                    onChange={getData}
-                    sx={{ width: "100%", maxWidth: "500px", my: 1 }}
-                /><br />
-                <TextField
-                    required
-                    label="Rating"
-                    variant="filled"
-                    type='number'
-                    name='rating'
-                    onChange={getData}
-                    sx={{ width: "100%", maxWidth: "500px", my: 1 }}
-                />
-                <br />
 
                 <TextField
                     required

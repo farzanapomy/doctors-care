@@ -1,12 +1,38 @@
 
 .service-title h6{
     font-size: 20px;
-    color: gray;
 }
 .service-title h1{
-    color: white;
     font-weight: 700;
     font-size: 50px;
     margin: 20px 0px;
+    
 }
 
+.single-total {
+    width: 400px;
+    height: 500px;
+    padding: 15px;
+}
+
+.single-service img{
+    width: 90px;
+    height: 100px;
+   margin: 0 auto;
+   margin-top: 15px;
+}
+
+.service-btn button{
+    background-color:#0f2041;
+    padding: 15px 50px;
+    border: 0px;
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.single-service:hover{
+    background-color: #0f2041;
+    color: white;
+}

@@ -1,0 +1,41 @@
+.about-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    margin-top: 540%;
+}
+
+.about-banner img{
+    width: 520px;
+    height: 600px;
+    border-radius: 25px;
+}
+
+.about-text{
+    line-height: 20px;
+    /* font-family:Impact,  '', serif; */
+    color: gray;
+    font-style: italic;
+   
+}
+.about{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid tomato;
+    
+}
+
+@media only screen and (max-width:688px) {
+    .about-banner img{
+        width: 330px;
+        height: 300px;
+        border-radius: 25px;
+    }
+}

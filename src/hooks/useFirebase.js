@@ -111,7 +111,7 @@ const useFirebase = () => {
 
     const addUser = (name, email) => {
         const data = { name, email }
-        fetch('http://localhost:5000/users', {
+        fetch('https://cryptic-eyrie-03713.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 "Content-type": "application/json"
@@ -126,7 +126,7 @@ const useFirebase = () => {
 
     //set admin
     const checkAdmin = (email) => {
-        fetch(`http://localhost:5000/users/${email}`)
+        fetch(`https://cryptic-eyrie-03713.herokuapp.com/users/${email}`)
             .then(res => res.json())
             .then(data => {
                 setAdmin(data.admin)

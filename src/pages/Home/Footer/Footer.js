@@ -8,7 +8,7 @@ import { BiEnvelope } from "react-icons/bi"
 const Footer = () => {
 
     return (
-        <Box className='footer'>
+        <Box style={{ backgroundColor: '#1a1a87', color: 'white', padding: '20px' }}>
             <Container sx={{ textAlign: 'left' }}>
                 <Grid container sx={{ mb: 3 }} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item sm={6} md={4} lg={4}>
@@ -30,12 +30,12 @@ const Footer = () => {
 
                     <Grid item sm={6} md={4} lg={4}>
                         <Typography variant='h5'>Important Links</Typography>
-                        <ul style={{ textAlign: 'left', marginLeft: 8 }}>
-                            <li style={{ margin: "10px 0px" }}><a style={{ textAlign: 'left' }} href="/">About</a></li>
-                            <li style={{ margin: "10px 0px" }}><a style={{ color: "" }} href="/">Privecy & Policy</a></li>
-                            <li style={{ margin: "10px 0px" }}><a style={{ color: "" }} href="/">Service</a>
+                        <ul style={{ textAlign: 'left', marginLeft: 8, textDecoration: 'none' }}>
+                            <li style={{ margin: "10px 0px", }}><a style={{ textAlign: 'left', color: "white", textDecoration: 'none' }} href="/">About</a></li>
+                            <li style={{ margin: "10px 0px" }}><a style={{ color: "white", textDecoration: 'none' }} href="/">Privacy & Policy</a></li>
+                            <li style={{ margin: "10px 0px" }}><a style={{ color: "white", textDecoration: 'none' }} href="/">Service</a>
                             </li>
-                            <li style={{ margin: "10px 0px" }}><a style={{ color: "" }} href="/">Terms</a>
+                            <li style={{ margin: "10px 0px" }}><a style={{ color: "white", textDecoration: 'none' }} href="/">Terms</a>
                             </li>
                         </ul>
                     </Grid>

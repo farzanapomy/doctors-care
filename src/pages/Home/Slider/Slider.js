@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade"
@@ -18,7 +17,7 @@ const Slider = () => {
   return (
     <>
       <Swiper spaceBetween={30} effect={'fade'} navigation={true} className="mySwiper">
-        <SwiperSlide><img src={banner1}  alt="" /></SwiperSlide>
+        <SwiperSlide><img src={banner1} alt="" /></SwiperSlide>
         <SwiperSlide><img src={banner2} alt="" /></SwiperSlide>
         <SwiperSlide><img src={banner3} alt="" /></SwiperSlide>
       </Swiper>

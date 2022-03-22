@@ -15,27 +15,27 @@ const Appointment = () => {
         const field = e.target.name;
         const newObj = { ...data }
         newObj[field] = value;
-        newObj.status = 'Pending';
         newObj.email = user.email
         setData(newObj)
     }
 
-    const [singleDoctors, setSingleDoctor] = useState([])
+    const [singleServices, setSingleServices] = useState([])
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/doctors/${ID}`
+        const url = `https://cryptic-eyrie-03713.herokuapp.com/services/${ID}`
         fetch(url)
             .then(res => res.json())
-            .then(data => setSingleDoctor(data))
+            .then(data => console.log(data))
     }, [ID])
+
 
     //get an appointment
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/appointments', data)
+        axios.post('https://cryptic-eyrie-03713.herokuapp.com/appointments', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Appointment Getting Successfully.Please Wait for approved')
@@ -61,7 +61,7 @@ const Appointment = () => {
 
             <div>
                 <Container>
-                    <img src={singleDoctors?.img} alt="" />
+                    <img src={singleServices?.img} alt="" />
 
 
                     <form onSubmit={handleSubmit}>
@@ -92,6 +92,7 @@ const Appointment = () => {
                             variant="filled"
                             type='number'
                             name='cost'
+                            defaultValue={singleServices?.cost}
                             onChange={getData}
                             sx={{ width: "100%", maxWidth: "500px", my: 1 }}
                         /><br />

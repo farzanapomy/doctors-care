@@ -14,7 +14,7 @@ import { NavLink } from 'react-router-dom';
 const AllAppointments = () => {
     const [appointments, setAppointments] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/appointments')
+        fetch('https://cryptic-eyrie-03713.herokuapp.com/appointments')
             .then(res => res.json())
             .then(data => setAppointments(data))
     }, [])
@@ -23,7 +23,7 @@ const AllAppointments = () => {
     const handleDelete = (id) => {
         const makeSure = window.confirm('Are you sure to want to delete this blog?')
         if (makeSure) {
-            fetch(`http://localhost:5000/appointments/${id}`, {
+            fetch(`https://cryptic-eyrie-03713.herokuapp.com/appointments/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -41,7 +41,7 @@ const AllAppointments = () => {
     //update status
     const handleStatus = (e, id) => {
         const statusObj = { status: e.target.value }
-        fetch(`http://localhost:5000/appointments/${id}`, {
+        fetch(`https://cryptic-eyrie-03713.herokuapp.com/appointments/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -54,7 +54,7 @@ const AllAppointments = () => {
             })
     }
 
-    
+
 
 
     return (

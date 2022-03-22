@@ -1,5 +1,6 @@
 import React from 'react';
 import Services from '../../PrivatePages/Services/Services';
+import About from '../About/About';
 import Doctors from '../Doctors/Doctors';
 import Reviews from '../Reviews/Reviews';
 import Slider from '../Slider/Slider';
@@ -9,8 +10,9 @@ const Home = () => {
         <div>
 
             <Slider />
+            <About></About>
+            <Services></Services>
             <Doctors />
-            <Services />
             <Reviews></Reviews>
         </div>
     );

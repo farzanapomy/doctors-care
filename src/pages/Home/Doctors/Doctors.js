@@ -2,7 +2,6 @@ import { Typography, Grid, Container, Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardMedia } from '@mui/material'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 
 const Doctors = () => {
@@ -15,18 +14,7 @@ const Doctors = () => {
     }, [])
 
 
-    const handleSubmit = (data) => {
-        axios.post('https://cryptic-eyrie-03713.herokuapp.com/appointments', data)
-            .then(res => {
-                if (res.data.insertedId) {
-                    alert('Your Orders successfully added');
-                }
-                console.log(res);
-            })
-
-        console.log('data');
-    }
-
+   
 
     return (
         <Container>
@@ -55,9 +43,7 @@ const Doctors = () => {
                                 </Typography >
                             </CardContent>
 
-                            <Link to={`/doctors/${doctor._id}`} >
-                                <Button variant='contained' onSubmit={handleSubmit}>Get Appointment</Button>
-                            </Link>
+                            
                         </Card>
                     </Grid>)
                 }
