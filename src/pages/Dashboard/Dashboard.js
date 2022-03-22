@@ -35,26 +35,50 @@ function Dashboard(props) {
                         Home
                     </ListItem>
                 </NavLink>
-                {!admin && < NavLink to='myblogs'>
-                    <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
-                        My Blogs
-                    </ListItem>
-                </NavLink>}
-                {admin && <NavLink to='allblogs'>
-                    <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
-                        All Blogs
-                    </ListItem>
-                </NavLink>}
-                <NavLink to='addblog'>
-                    <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
-                        Add Blogs
-                    </ListItem>
-                </NavLink>
-                {admin && <NavLink to='makeadmin'>
-                    <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
-                        Make Admin
-                    </ListItem>
-                </NavLink>}
+                {!admin && <Box>
+                    < NavLink to='Appointment'>
+                        <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                            Get Appointment
+                        </ListItem>
+                    </NavLink>
+                    <NavLink to='AddReview'>
+                        <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                            Add Review
+                        </ListItem>
+                    </NavLink>
+                </Box>
+                }
+
+                {admin &&
+
+                    <Box>
+                        <NavLink to='AddDoctors'>
+                            <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                                Add Doctors
+                            </ListItem>
+                        </NavLink>
+                        <NavLink to='AddServices'>
+                            <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                                Add Services
+                            </ListItem>
+                        </NavLink>
+                        <NavLink to='MakeAdmin'>
+                            <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                                Make Admin
+                            </ListItem>
+                        </NavLink>
+                        <NavLink to='AllAppointments'>
+                            <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                                All Appointments
+                            </ListItem>
+                        </NavLink>
+                        <NavLink to='AllReviews'>
+                            <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                                All Reviews
+                            </ListItem>
+                        </NavLink>
+                    </Box>
+                }
                 <ListItem onClick={singOutUser} sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
                     Log Out
                 </ListItem>
@@ -100,7 +124,7 @@ function Dashboard(props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, 
+                        keepMounted: true,
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
@@ -132,7 +156,7 @@ function Dashboard(props) {
 }
 
 Dashboard.propTypes = {
-   
+
     window: PropTypes.func,
 };
 

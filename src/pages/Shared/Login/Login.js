@@ -1,12 +1,11 @@
 import { Alert, Box, Button, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
-// import useAuth from '../../hooks/useAuth';
+import useAuth from '../../../hooks/useAuth';
 // import './login.css'
 
 const Login = () => {
-    const { signInUser, error } = useFirebase();
+    const { signInUser, error } = useAuth();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const location = useLocation();
@@ -19,7 +18,7 @@ const Login = () => {
     }
 
     return (
-        <Box className='login-regi'>
+        <Box className='login-register'>
             <Box className='form'>
                 <form onSubmit={handleSubmit}>
                     <TextField
@@ -40,9 +39,11 @@ const Login = () => {
                     <Button sx={{ py: 1, my: 1 }} type='submit' variant='outlined'>Login</Button>
                     <br />
                 </form>
+
                 {
                     error && <Alert severity="error">{error}</Alert>
                 }
+
                 <Typography>New Here? <NavLink to='/register'>Register</NavLink></Typography>
 
             </Box>

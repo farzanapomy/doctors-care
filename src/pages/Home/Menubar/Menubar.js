@@ -117,9 +117,12 @@ const Menubar = () => {
 
                                 {
                                     user.email ?
-                                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
-                                            <Link style={{ color: 'white', paddingRight: '10px', textDecoration: 'none' }} variant='outlined' to='/' onClick={singOutUser}>Log Out</Link>
-                                            <p className='userName'>{user.displayName}</p>
+                                        <div style={{ display: "flex", }}>
+                                            <Link style={{ color: 'white', textDecoration: 'none' }} variant='outlined' to='/' onClick={singOutUser}>Log Out
+                                                <span style={{ color: 'gray', fontWeight: 900, padding: '0px 15px' }}>{" "}Hello {user.displayName}</span></Link>
+                                            <Link style={{ color: 'white', textDecoration: 'none' }} variant='outlined' to='/dashboard' >Dashboard
+                                            </Link>
+
                                         </div> :
                                         <Link className={navItem} to='login' style={{ color: 'white', paddingRight: '10px', textDecoration: 'none' }}>
                                             Login

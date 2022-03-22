@@ -4,7 +4,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
-    const { singInUsingGoogle } = useAuth();
+    const { singInUsingGoogle, createUser } = useAuth();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
@@ -13,7 +13,7 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // createUser(email, password, name, navigate)
+        createUser(email, password, name, navigate)
     }
     const handleGoogleSignIn = (e) => {
         e.preventDefault()
@@ -48,7 +48,7 @@ const Register = () => {
                         required
                     />
                     <br />
-                    <Button sx={{ py: 1, my: 1 }} type='submit' variant='outlined'>Register</Button>
+                    <Button sx={{ py: 1, my: 1 }} type='submit' variant='outlined' >Register</Button>
                 </form>
                 {/* {
                     error && <Alert severity="error">{error}</Alert>

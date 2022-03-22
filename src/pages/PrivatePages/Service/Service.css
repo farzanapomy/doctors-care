@@ -1,0 +1,23 @@
+.single-service img{
+    width: 90px;
+    height: 100px;
+   margin: 0 auto;
+   margin-top: 15px;
+}
+.single-service{
+    color: black;
+
+}
+.service-btn button{
+    background-image:linear-gradient(#a1adc59c,#FF9900);
+    padding: 8px 30px;
+    border: 0px;
+    border-radius: 8px;
+    margin: 10px;
+
+}
+
+.single-service:hover{
+    background-color: #0f2041;
+    color: white;
+}
