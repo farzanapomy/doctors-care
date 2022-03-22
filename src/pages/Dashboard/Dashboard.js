@@ -77,6 +77,11 @@ function Dashboard(props) {
                                 All Reviews
                             </ListItem>
                         </NavLink>
+                        <NavLink to='AllServices'>
+                            <ListItem sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>
+                                AllServices
+                            </ListItem>
+                        </NavLink>
                     </Box>
                 }
                 <ListItem onClick={singOutUser} sx={{ display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem", color: "#333" }} button>

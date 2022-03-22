@@ -21,6 +21,8 @@ import AddDoctors from './pages/PrivatePages/AddDoctors/AddDoctors';
 import AllAppointments from './pages/PrivatePages/AllAppointments/AllAppointments';
 import AddReview from './pages/PrivatePages/AddReview/AddReview';
 import AllReviews from './pages/PrivatePages/AllReviews/AllReviews';
+import UpdateService from './pages/PrivatePages/UpdateService/UpdateService';
+import AllServices from './pages/PrivatePages/AllServices/AllServices';
 
 function App() {
   return (
@@ -40,10 +42,8 @@ function App() {
             <Route path="AllDoctors" element={<AllDoctors />} />
             <Route path="Services" element={<Services />} />
             <Route path="MakeAdmin" element={<MakeAdmin />} />
-
             <Route path="/Services/:ID" element={<PrivateRoute><Appointment /> </PrivateRoute>} />
-
-
+            <Route path='/Services/update/:updateId' element={<UpdateService />} />
 
 
             <Route path='/dashboard' element={<PrivateRoute>
@@ -54,6 +54,8 @@ function App() {
               <Route path='AllReviews' element={<AdminRoute><AllReviews /></AdminRoute>} />
               <Route path='MakeAdmin' element={<AdminRoute><MakeAdmin /></AdminRoute>} />
               <Route path='AllAppointments' element={<AdminRoute><AllAppointments /></AdminRoute>} />
+              <Route path='AllAppointments' element={<AdminRoute><AllAppointments /></AdminRoute>} />
+              <Route path='AllServices' element={<AdminRoute><AllServices /></AdminRoute>} />
 
               <Route path='AddServices' element={<AdminRoute><AddServices /></AdminRoute>} />
             </Route>
